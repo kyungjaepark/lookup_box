@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lookupBox1 = new Unnamed.LookupBox.LookupBox();
+            this.SuspendLayout();
+            // 
+            // lookupBox1
+            // 
+            this.lookupBox1.BaseDataSet = null;
+            this.lookupBox1.ItemCategory = "s";
+            this.lookupBox1.ItemID = "s";
+            this.lookupBox1.Location = new System.Drawing.Point(12, 12);
+            this.lookupBox1.Name = "lookupBox1";
+            this.lookupBox1.Size = new System.Drawing.Size(246, 20);
+            this.lookupBox1.TabIndex = 0;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(552, 325);
+            this.Controls.Add(this.lookupBox1);
+            this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Unnamed.LookupBox.LookupBox lookupBox1;
     }
 }
 
