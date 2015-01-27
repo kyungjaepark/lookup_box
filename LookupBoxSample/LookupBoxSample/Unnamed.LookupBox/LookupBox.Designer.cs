@@ -32,12 +32,12 @@
             this.inputText = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.displayLabel = new Unnamed.LookupBox.EllipsisLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.browseButton = new System.Windows.Forms.Button();
             this.historyButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.displayLabel = new Unnamed.LookupBox.EllipsisLabel();
             this.panel1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -75,7 +75,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
@@ -83,29 +83,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(246, 20);
             this.splitContainer1.SplitterDistance = 82;
             this.splitContainer1.TabIndex = 11;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(82, 20);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "###";
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // displayLabel
-            // 
-            this.displayLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.displayLabel.Location = new System.Drawing.Point(0, 0);
-            this.displayLabel.Margin = new System.Windows.Forms.Padding(3);
-            this.displayLabel.Name = "displayLabel";
-            this.displayLabel.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.displayLabel.Size = new System.Drawing.Size(160, 20);
-            this.displayLabel.TabIndex = 7;
-            this.displayLabel.Text = "####";
             // 
             // tableLayoutPanel1
             // 
@@ -147,6 +124,30 @@
             this.historyButton.Text = "v";
             this.historyButton.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.label1.Size = new System.Drawing.Size(82, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // displayLabel
+            // 
+            this.displayLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.displayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.displayLabel.Location = new System.Drawing.Point(0, 0);
+            this.displayLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.displayLabel.Name = "displayLabel";
+            this.displayLabel.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.displayLabel.Size = new System.Drawing.Size(160, 20);
+            this.displayLabel.TabIndex = 7;
+            this.displayLabel.Text = "####";
+            // 
             // LookupBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,7 +160,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -173,10 +173,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox textBox1;
         private Unnamed.LookupBox.EllipsisLabel displayLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button browseButton;
         private System.Windows.Forms.Button historyButton;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -43,14 +43,14 @@ namespace Unnamed.LookupBox
             set
             {
                 _itemId = value;
-                textBox1.Text = _itemId;
+                label1.Text = _itemId;
                 refreshDisplayLabel();
             }
         }
         public int ItemWidth
         {
-            get { return textBox1.Width; }
-            set { textBox1.Width = value;  }
+            get { return label1.Width; }
+            set { label1.Width = value; }
         }
 
         public static string StringItemIdNotAvailable = "(?)";
@@ -85,29 +85,19 @@ namespace Unnamed.LookupBox
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Return)
-            {
-                textBox1.SelectAll();
-                ItemID = textBox1.Text;
-            }
-
-            if (e.KeyCode == Keys.Escape)
-            {
-                _candidateForm.Hide();
-            }
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 27)
-                return;
+        }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
             _candidateForm.Show();
-            _candidateForm.Top = this.PointToScreen(new Point(0, 0)).Y + this.Height;
+            _candidateForm.Top = this.PointToScreen(new Point(0, 0)).Y;
             _candidateForm.Left = this.PointToScreen(new Point(0, 0)).X;
             _candidateForm.TopMost = true;
-            _candidateForm.ready(this.ItemType, textBox1.Text, this.BaseDataSet, this);
-            this.Focus();
+            _candidateForm.ready(label1, this);
         }
     }
 
