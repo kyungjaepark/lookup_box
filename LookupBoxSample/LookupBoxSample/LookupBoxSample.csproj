@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Unnamed.LookupBox\LookupBoxCandidateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unnamed.LookupBox\LookupBoxCandidateForm.Designer.cs">
+      <DependentUpon>LookupBoxCandidateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Unnamed.LookupBox\SampleDataSet.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -70,6 +76,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Unnamed.LookupBox\LookupBoxCandidateForm.resx">
+      <DependentUpon>LookupBoxCandidateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

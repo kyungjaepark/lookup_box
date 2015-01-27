@@ -33,9 +33,12 @@
             // 
             // lookupBox1
             // 
+            this.lookupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.lookupBox1.BaseDataSet = null;
-            this.lookupBox1.ItemCategory = "s";
+            this.lookupBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lookupBox1.ItemType = "s";
             this.lookupBox1.ItemID = "s";
+            this.lookupBox1.ItemWidth = 67;
             this.lookupBox1.Location = new System.Drawing.Point(12, 12);
             this.lookupBox1.Name = "lookupBox1";
             this.lookupBox1.Size = new System.Drawing.Size(246, 20);

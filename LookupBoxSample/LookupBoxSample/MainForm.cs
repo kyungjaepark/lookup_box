@@ -15,8 +15,16 @@ namespace LookupBoxSample
             InitializeComponent();
         }
 
+        DataSet ds_sample = new DataSet();
         private void MainForm_Load(object sender, EventArgs e)
         {
+            ds_sample = Unnamed.LookupBox.SampleDataSet.createSampleDataSet();
+
+            lookupBox1.BaseDataSet = ds_sample;
+            lookupBox1.ItemType = "Stocks";
+            lookupBox1.ItemID = "16050";
         }
+
+
     }
 }
